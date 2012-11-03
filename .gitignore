@@ -3,7 +3,7 @@
 *.lo
 *.o
 *.out
-
+Destruction.pro.user
 # Compiled Dynamic libraries
 *.so
 
