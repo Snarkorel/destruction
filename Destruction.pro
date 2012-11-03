@@ -1,11 +1,11 @@
 SOURCES += \
-    trunk/main.cpp \
-    trunk/scene/MainScene.cpp \
-    trunk/widget/MainForm.cpp
+    main.cpp \
+    scene/MainScene.cpp \
+    widget/MainForm.cpp
 
 HEADERS += \
-    trunk/scene/MainScene.h \
-    trunk/widget/MainForm.h
+    scene/MainScene.h \
+    widget/MainForm.h
 
 OTHER_FILES += \
-    trunk/graphics/bg.jpg
+    graphics/bg.jpg

@@ -1,4 +1,4 @@
-#include "trunk/scene/MainScene.h"
+#include "scene/MainScene.h"
 #include "MainForm.h"
 
 MainForm::MainForm(QWidget *parent):QMainWindow(parent)

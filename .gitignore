@@ -3,7 +3,10 @@
 *.lo
 *.o
 *.out
+moc_*
 Destruction.pro.user
+Makefile
+Destruction
 # Compiled Dynamic libraries
 *.so
 
