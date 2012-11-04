@@ -9,3 +9,6 @@ HEADERS += \
 
 OTHER_FILES += \
     graphics/bg.jpg
+
+OBJECTS_DIR = tmp
+MOC_DIR			= tmp

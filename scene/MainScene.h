@@ -8,10 +8,6 @@ class MainScene:public QGraphicsScene{
 public:
     MainScene( QObject *parent = 0 );
     void AddObject( QObject *, int, int ){};
-
-
-
-
 };
 
 
