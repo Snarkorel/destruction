@@ -16,9 +16,9 @@ MainForm::MainForm(QWidget *parent){
 //TODO: Обработку событий нужно вынести в отдельный класс
 void MainForm::keyPressEvent(QKeyEvent *event){
 	switch (event->key()){
-		case Qt::Key_Up: {gamescene->gamerUp();break;}
-		case Qt::Key_Down: {qDebug("down");break;}
-		case Qt::Key_Left: {qDebug("left");break;}
-		case Qt::Key_Right: {qDebug("right");break;}
+    case Qt::Key_Up: {gamescene->gamerUp();break;}
+    case Qt::Key_Down: {gamescene->gamerDown();break;}
+    case Qt::Key_Left: {gamescene->gamerLeft();break;}
+    case Qt::Key_Right: {gamescene->gamerRight();break;}
 	}
 }

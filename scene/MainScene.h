@@ -12,6 +12,9 @@ class MainScene:public QGraphicsScene{
 public:
     void									setBackground(int cellSize = 50);
     void									gamerUp();
+    void									gamerDown();
+    void									gamerRight();
+    void									gamerLeft();
 };
 
 #endif // MAINSCENE_H

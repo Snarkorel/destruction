@@ -37,5 +37,20 @@ void MainScene::setBackground(int cellSize)
 //Нужно будет запускать таймер, который будет проверять состояние флагов и вызывать методы меняющие координаты пиксмапа
 void MainScene::gamerUp()
 {
-	gamerImage->setY(gamerImage->y()-10);
+  gamerImage->setY(gamerImage->y()-10);
+}
+
+void MainScene::gamerDown()
+{
+  gamerImage->setY(gamerImage->y()+10);
+}
+
+void MainScene::gamerRight()
+{
+  gamerImage->setX(gamerImage->x()+10);
+}
+
+void MainScene::gamerLeft()
+{
+  gamerImage->setX(gamerImage->x()-10);
 }
