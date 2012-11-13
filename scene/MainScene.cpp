@@ -39,3 +39,15 @@ void MainScene::gamerUp()
 {
 	gamerImage->setY(gamerImage->y()-10);
 }
+void MainScene::gamerDown()
+{
+    gamerImage->setY(gamerImage->y()+10);
+}
+void MainScene::gamerRight()
+{
+    gamerImage->setX(gamerImage->x()+10);
+}
+void MainScene::gamerLeft()
+{
+    gamerImage->setX(gamerImage->x()-10);
+}
