@@ -15,6 +15,7 @@ public:
     void									gamerDown();
     void									gamerRight();
     void									gamerLeft();
+    int                   max_player_offset(int direction);
 };
 
 #endif // MAINSCENE_H

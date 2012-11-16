@@ -9,6 +9,10 @@ class Gamer:public QObject{
 public:
     Gamer( QObject *parent = 0 );
     QPixmap  				image;
+    int width();
+    int height();
+    int delta_w;
+    int delta_h;
 };
 
 
