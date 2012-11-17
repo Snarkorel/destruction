@@ -6,7 +6,8 @@
 class MainScene;
 class QKeyEvent;
 
-class MainForm : public QWidget{
+class MainForm : public QWidget
+{
     Q_OBJECT
 public:
     MainForm(QWidget * parent = 0);

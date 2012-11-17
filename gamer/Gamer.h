@@ -4,7 +4,8 @@
 #include <QPixmap>
 
 
-class Gamer:public QObject{
+class Gamer:public QObject
+{
     Q_OBJECT
 public:
     Gamer( QObject *parent = 0 );
