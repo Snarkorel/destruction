@@ -15,6 +15,7 @@ void MainScene::setBackground(int cellSize)
 	int width = views().first()->width();
 	int height = views().first()->height();
 	//Создание "шахматки"
+  //Шахматка, кстати, выходит за пределы сцены
 	for(int i = 0; i <= height/cellSize; i++){
 	
 		if (i % 2 == 0){firstColor=Qt::black;secondColor=Qt::white;}
@@ -28,6 +29,8 @@ void MainScene::setBackground(int cellSize)
 	//Добавление изображения игрока на сцену
 	setSceneRect(0,0,width,height);
   gamer = new Gamer(this);
+  gamer->delta_h=10;
+  gamer->delta_w=10;
   gamerImage = addPixmap(gamer->image);
   gamerImage->setPos(100,100);
 }
@@ -36,17 +39,17 @@ void MainScene::setBackground(int cellSize)
 //Чтобы не было задержки перед повторным срабатыванием нужно создать несколько флагов, которые будут отвечать за зажатость/отпущенность клавиши
 //Нужно будет запускать таймер, который будет проверять состояние флагов и вызывать методы меняющие координаты пиксмапа
 
-//Пока что здесь хреновая реализация с магическими числами
 int MainScene::max_player_offset(int direction)
 {
   int offset=10;
-  if (direction==0 && gamerImage->y()-10<0) {offset=gamerImage->y();}
-  if (direction==1 && gamerImage->y()+10>height()) {offset=height()-gamerImage->y();}
-  if (direction==2 && gamerImage->x()+10>width()) {offset=width()-gamerImage->x();}
-  if (direction==3 && gamerImage->x()-10<0) {offset=gamerImage->x();}
+  if (direction==0 && gamerImage->y()-gamer->delta_h<0) {offset=gamerImage->y();}
+  if (direction==1 && gamerImage->y()+gamer->delta_h>height()) {offset=height()-gamerImage->y();}
+  if (direction==2 && gamerImage->x()+gamer->delta_w>width()) {offset=width()-gamerImage->x();}
+  if (direction==3 && (gamerImage->x()-gamer->delta_w)<0) {offset=gamerImage->x();}
   return offset;
 }
 
+//Потом надо будет убрать вычитание, но у меня почему-то неправильно работает суммирование отрицательного числа
 void MainScene::gamerUp()
 {
   gamerImage->setY(gamerImage->y()-max_player_offset(0));
