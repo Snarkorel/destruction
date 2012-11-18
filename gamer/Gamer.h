@@ -7,11 +7,14 @@
 class Gamer:public QGraphicsPixmapItem
 {
     // Q_OBJECT
-		QPixmap  				image;
 public:
     Gamer( QObject *parent = 0 );
-    int							width();
-    int							height();
+    QPixmap  				image;
+    int getDeltaOffset();
+private:
+    int width();
+    int height();
+    int delta;
 };
 
 

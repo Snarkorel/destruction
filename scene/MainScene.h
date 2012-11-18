@@ -12,12 +12,13 @@ class MainScene:public QGraphicsScene
   Maze								* maze;
     
 public:
-	void									createMaze();
+  void									createMaze();
   void									setBackground(int cellSize = 50);
   void									gamerUp();
   void									gamerDown();
   void									gamerRight();
   void									gamerLeft();
+  int                   max_player_offset(int direction);
 };
 
 #endif // MAINSCENE_H
