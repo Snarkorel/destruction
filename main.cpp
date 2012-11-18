@@ -3,9 +3,9 @@
 #include "widget/MainForm.h"
 #include <QDebug>
 
-int main(int argc, char * argv[]){
-
-    QApplication app(argc,argv);
-    MainForm * window = new MainForm;
-    return app.exec();
+int main(int argc, char * argv[])
+{
+  QApplication app(argc,argv);
+  MainForm * window = new MainForm;
+  return app.exec();
 }

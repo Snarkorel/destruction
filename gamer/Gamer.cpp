@@ -4,8 +4,9 @@
 Gamer::Gamer(QObject *parent):
 										image(50,50)
 {
-    image.fill(Qt::green);
-    Gamer::delta=10;
+  image.load("graphics/player.png");
+  setPixmap(image);
+  setTransformOriginPoint(width()/2,height()/2);
 }
 
 int Gamer::getDeltaOffset()

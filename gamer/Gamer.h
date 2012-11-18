@@ -2,10 +2,12 @@
 #define GAMER_H
 #include <QObject>
 #include <QPixmap>
+#include <QGraphicsPixmapItem>
 
-
-class Gamer:public QObject{
-    Q_OBJECT
+class Gamer:public QGraphicsPixmapItem
+{
+    // Q_OBJECT
+		QPixmap  				image;
 public:
     Gamer( QObject *parent = 0 );
     QPixmap  				image;
