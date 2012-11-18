@@ -11,7 +11,7 @@ MazeCell::MazeCell(int recivedEdgeSize):
 void MazeCell::setImage(QString path)
 {
 	//Здесь пока что рисуем красные квадратики
-	cellImage.fill(Qt::red);
+	cellImage.load("graphics/wall.png");
 	setPixmap(cellImage);
 }
 
