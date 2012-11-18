@@ -28,9 +28,7 @@ void MainScene::setBackground(int cellSize)
 	}
 	//Добавление изображения игрока на сцену
 	setSceneRect(0,0,width,height);
-  gamer = new Gamer(this);
-  gamer->delta_h=10;
-  gamer->delta_w=10;
+  gamer = new Gamer;
   gamerImage = addPixmap(gamer->image);
   gamerImage->setPos(100,100);
 }
@@ -41,11 +39,11 @@ void MainScene::setBackground(int cellSize)
 
 int MainScene::max_player_offset(int direction)
 {
-  int offset=10;
-  if (direction==0 && gamerImage->y()-gamer->delta_h<0) {offset=gamerImage->y();}
-  if (direction==1 && gamerImage->y()+gamer->delta_h>height()) {offset=height()-gamerImage->y();}
-  if (direction==2 && gamerImage->x()+gamer->delta_w>width()) {offset=width()-gamerImage->x();}
-  if (direction==3 && (gamerImage->x()-gamer->delta_w)<0) {offset=gamerImage->x();}
+  int offset=gamer->getDeltaOffset();
+  if (direction==0 && gamerImage->y()-gamer->getDeltaOffset()<0) {offset=gamerImage->y();}
+  if (direction==1 && gamerImage->y()+gamer->getDeltaOffset()>height()) {offset=height()-gamerImage->y();}
+  if (direction==2 && gamerImage->x()+gamer->getDeltaOffset()>width()) {offset=width()-gamerImage->x();}
+  if (direction==3 && (gamerImage->x()-gamer->getDeltaOffset())<0) {offset=gamerImage->x();}
   return offset;
 }
 

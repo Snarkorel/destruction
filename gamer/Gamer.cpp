@@ -5,10 +5,13 @@ Gamer::Gamer(QObject *parent):
 										image(50,50)
 {
     image.fill(Qt::green);
-    int delta_w;
-    int delta_h;
+    Gamer::delta=10;
 }
 
+int Gamer::getDeltaOffset()
+{
+  return Gamer::delta;
+}
 
 int Gamer::width()
 {
