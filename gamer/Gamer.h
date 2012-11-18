@@ -12,9 +12,6 @@ public:
     QPixmap  				image;
     int							width();
     int							height();
-    int 						azimuth();
-    // void						setX(int);
-    // void						setY(int);
 };
 
 
