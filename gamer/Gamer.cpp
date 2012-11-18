@@ -7,6 +7,7 @@ Gamer::Gamer(QObject *parent):
   image.load("graphics/player.png");
   setPixmap(image);
   setTransformOriginPoint(width()/2,height()/2);
+  delta=10;
 }
 
 int Gamer::getDeltaOffset()

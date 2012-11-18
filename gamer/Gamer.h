@@ -7,7 +7,6 @@
 class Gamer:public QGraphicsPixmapItem
 {
     // Q_OBJECT
-		QPixmap  				image;
 public:
     Gamer( QObject *parent = 0 );
     QPixmap  				image;
