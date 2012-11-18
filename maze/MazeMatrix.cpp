@@ -33,7 +33,7 @@ int MazeMatrix::columnsCount()
 
 int MazeMatrix::rowsCount()
 {
-	return rows
+	return row
 }
 
 //Проверка того, что матрица валидная
