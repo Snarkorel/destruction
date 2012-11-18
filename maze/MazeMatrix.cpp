@@ -28,7 +28,7 @@ void MazeMatrix::setMatrixFromFile(QString inputAddress)
 
 int MazeMatrix::columnsCount()
 {
-	return columns
+	return column
 }
 
 int MazeMatrix::rowsCount()
