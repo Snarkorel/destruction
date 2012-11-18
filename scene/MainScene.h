@@ -8,7 +8,7 @@ class Maze;
 class MainScene:public QGraphicsScene
 {
   Q_OBJECT
-  QGraphicsPixmapItem * gamerImage;
+  // QGraphicsPixmapItem * gamerImage;
   Gamer 							*	gamer;
   Maze								* maze;
     

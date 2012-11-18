@@ -6,6 +6,7 @@
 #include "gamer/Gamer.h"
 #include "maze/Maze.h"
 #include <QGraphicsPixmapItem>
+#include <QDebug>
 
 //TODO: Потом сюда нормальную текстуру натянем
 void MainScene::setBackground(int cellSize)
@@ -19,8 +20,8 @@ void MainScene::setBackground(int cellSize)
 	//Добавление изображения игрока на сцену
 	setSceneRect(0,0,width,height);
 	gamer = new Gamer;
-  gamerImage = addPixmap(gamer->image);
-  gamerImage->setPos(100,100);
+  addItem(gamer);
+  gamer->setPos(100,100);
   createMaze();
 }
 
@@ -29,22 +30,26 @@ void MainScene::setBackground(int cellSize)
 //Нужно будет запускать таймер, который будет проверять состояние флагов и вызывать методы меняющие координаты пиксмапа
 void MainScene::gamerUp()
 {
-  gamerImage->setY(gamerImage->y()-10);
+	gamer->setRotation(0);
+  gamer->setY(gamer->y()-10);
 }
 
 void MainScene::gamerDown()
 {
-  gamerImage->setY(gamerImage->y()+10);
+	gamer->setRotation(180);
+  gamer->setY(gamer->y()+10);
 }
 
 void MainScene::gamerRight()
 {
-  gamerImage->setX(gamerImage->x()+10);
+	gamer->setRotation(90);
+  gamer->setX(gamer->x()+10);
 }
 
 void MainScene::gamerLeft()
 {
-  gamerImage->setX(gamerImage->x()-10);
+	gamer->setRotation(270);
+  gamer->setX(gamer->x()-10);
 }
 
 void MainScene::createMaze()
