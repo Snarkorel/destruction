@@ -13,9 +13,9 @@ void Maze::loadMazeFromFile(QString inputString)
 
 void Maze::createImages()
 {
-	for(int i=0;i<matrix.columnsCount();i++)
+	for(int i=0;i<matrix.rowsCount();i++)
 	{
-		for(int j=0;j<matrix.rowsCount();j++)
+		for(int j=0;j<matrix.columnsCount();j++)
 		{
 			MazeCell * cell = new MazeCell(50);
 			
@@ -32,9 +32,9 @@ void Maze::createImages()
 
 void Maze::setMazeToScene(QGraphicsScene * scene)
 {
-	for(int i=0;i<matrix.columnsCount();i++)
+	for(int i=0;i<matrix.rowsCount();i++)
 	{
-		for(int j=0;j<matrix.rowsCount();j++)
+		for(int j=0;j<matrix.columnsCount();j++)
 		{
 			scene->addItem(cellsMap.value(QPair<int,int>(i,j)));
 		}
