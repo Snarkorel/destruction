@@ -28,12 +28,12 @@ void MazeMatrix::setMatrixFromFile(QString inputAddress)
 
 int MazeMatrix::columnsCount()
 {
-	return columns
+	return columns;
 }
 
 int MazeMatrix::rowsCount()
 {
-	return rows
+	return rows;
 }
 
 //Проверка того, что матрица валидная
