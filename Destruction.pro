@@ -5,7 +5,8 @@ SOURCES += \
     gamer/Gamer.cpp     \
     maze/Maze.cpp 		\
     maze/MazeMatrix.cpp \
-    maze/MazeCell.cpp
+    maze/MazeCell.cpp \
+    eventhandler/EventHandler.cpp \
 
 HEADERS += \
     scene/MainScene.h \
@@ -13,7 +14,9 @@ HEADERS += \
     gamer/Gamer.h 	  \
     maze/Maze.h   	  \
     maze/MazeMatrix.h \
-    maze/MazeCell.h
+    maze/MazeCell.h \
+    eventhandler/EventHandler.h \
+
 
 DESTDIR = .
 TARGET  = Destruction

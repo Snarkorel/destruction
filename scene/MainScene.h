@@ -2,23 +2,25 @@
 #define MAINSCENE_H
 #include <QGraphicsScene>
 
+
 class Gamer;
 class Maze;
+class EventHandler;
 
 class MainScene:public QGraphicsScene
 {
+  //TODO сделать метод который бы вернул указатель на gamer  
+  // вернуть геймера в private  и внести соответсвующие изменения в класс обработчик
   Q_OBJECT
-  Gamer 							*	gamer;
-  Maze								* maze;
+  
+  Maze * maze;
     
 public:
-  void									createMaze();
-  void									setBackground(int cellSize = 50);
-  void									gamerUp();
-  void									gamerDown();
-  void									gamerRight();
-  void									gamerLeft();
-  int                   max_player_offset(int direction);
+  Gamer * gamer;
+  //MainScene();
+  void createMaze();
+  void setBackground(int cellSize = 50);
+  
 };
 
 #endif // MAINSCENE_H
