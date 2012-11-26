@@ -18,28 +18,28 @@ Gamer::Gamer(QObject *parent):
 void Gamer::gamerUp()
 {
   this->setRotation(0);
-  this->setY(this->y()-MaxPlayerOffset(0));
+  this->setY(this->y()-maxPlayerOffset(0));
 }
 
 void Gamer::gamerDown()
 {
   this->setRotation(180);
-  this->setY(this->y()+MaxPlayerOffset(1));
+  this->setY(this->y()+maxPlayerOffset(1));
 }
 
 void Gamer::gamerRight()
 {
   this->setRotation(90);
-  this->setX(this->x()+MaxPlayerOffset(2));
+  this->setX(this->x()+maxPlayerOffset(2));
 }
 
 void Gamer::gamerLeft()
 {
   this->setRotation(270);
-  this->setX(this->x()-MaxPlayerOffset(3));
+  this->setX(this->x()-maxPlayerOffset(3));
 }
 // проблема с перемещением крылась в этом методе поэтому он пока закоментирован 
-int Gamer::MaxPlayerOffset(int direction)
+int Gamer::maxPlayerOffset(int direction)
 {
   int offset=this->getDeltaOffset();
   if ((direction==0) && (this->y()-this->getDeltaOffset()<0)) {offset=this->y();}

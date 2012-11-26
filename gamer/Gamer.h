@@ -4,24 +4,66 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 
+/** \class Gamer
+*	\brief Класс игрока
+*
+* Содержит методы, присущие игроку, которым управляет пользователь
+*/
+
 class Gamer:public QGraphicsPixmapItem
 {
-    // Q_OBJECT
-public:
-  Gamer( QObject *parent = 0 );
-  void gamerUp();
-  void gamerDown();
-  void gamerRight();
-  void gamerLeft();
-  // так будет правильнее
-  inline int getDeltaOffset(){ return delta; };
-  inline int width(){ return image.width(); };
-  inline int height(){ return image.height(); };
-
-  int MaxPlayerOffset(int);
-private:
+  /**
+  * Атрибут хранит объект-изображение игрока
+  */
   QPixmap image;
+  /**
+  * Атрибут хранит максимальное расстояние, на которое может сместиться игрок за 
+  * один раз.
+  */
   int delta;
+public:
+	/** 
+  * Конструктор создает изображение игрока, устанавливает точку, вокруг которой 
+  * будет осуществляться поворот и определяет расстояние, на которое будет 
+  * смещаться игрок при движении
+	*/
+  Gamer( QObject *parent = 0 );
+  /**
+  * Поворот с сдвигом игрока вверх
+  */
+  void gamerUp();
+  /**
+  * Поворот с сдвигом игрока вниз
+  */
+  void gamerDown();
+  /**
+  * Поворот с сдвигом игрока вправо
+  */
+  void gamerRight();
+  /**
+  * Поворот с сдвигом игрока влево
+  */
+  void gamerLeft();
+  /**
+  * Метод возвращает расстояние, на которое сдвигается игрок, установленное в 
+  * конструкторе
+  */
+  inline int getDeltaOffset(){ return delta; };
+  /**
+  * Метод возвращает ширину игрока
+  */
+  inline int width(){ return image.width(); };
+  /**
+  * Метод возвращает высоту игрока
+  */
+  inline int height(){ return image.height(); };
+  /**
+  * Метод возвращает принимает направление движения игрока (целое число от 0 
+  * до 4) и возвращает максимальное расстояние, на которое может сдвинуться 
+  * игрок в этом направлении. Используется для обработки столкновений с 
+  * границами карты.
+  */
+  int maxPlayerOffset(int);
 };
 
 
