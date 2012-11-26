@@ -3,7 +3,7 @@
 #include <QKeyEvent>
 #include "eventhandler/EventHandler.h"
 
-MainForm::MainForm(QWidget *parent)
+MainForm::MainForm()
 { 
   setWindowTitle(trUtf8("Destruction"));
  	gamescene = new MainScene;

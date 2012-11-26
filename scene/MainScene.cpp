@@ -11,9 +11,6 @@
 //TODO: Потом сюда нормальную текстуру натянем
 void MainScene::setBackground(int cellSize)
 {
-	QColor firstColor;
-	QColor secondColor;
-
 	int width = views().first()->width();
 	int height = views().first()->height();
 	

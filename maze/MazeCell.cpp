@@ -10,7 +10,6 @@ MazeCell::MazeCell(int recivedEdgeSize):
 //Установка нужного изображения для ячейки
 void MazeCell::setImage(QString path)
 {
-	//Здесь пока что рисуем красные квадратики
 	cellImage.load("graphics/wall.png");
 	setPixmap(cellImage);
 }

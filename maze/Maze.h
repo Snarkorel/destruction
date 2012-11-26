@@ -1,4 +1,3 @@
-//Класс обеспечивает построение лабиринта
 #ifndef MAZE_H
 #define MAZE_H
 #include <QString>
@@ -8,18 +7,37 @@
 #include <QPair>
 
 class QGraphicsScene;
-
+/** \class Maze
+* \brief Класс лабиринта
+*
+* Класс содержит атрибуты и методы, присущие всему лабиринту.
+*/
 class Maze
 {
-    MazeMatrix  											matrix;
-    QPair<int,int>										cellPosition;
-    //Ячейки лабиринта храним в мапе, ключ - пара из номера стобца и строки
-    QMap<QPair<int,int>,MazeCell * > 	cellsMap;
-    void 															createImages();
+  /**
+  * Атрибут хранит матрицу лабиринта
+  */
+  MazeMatrix  											matrix;
+  /**
+  * Атрибут хранит ячейки лабиринта. Для доступа к ячейке используется пара
+  * № строки, № колонки
+  */
+  QMap<QPair<int,int>,MazeCell * > 	cellsMap;
+  /**
+  * Метод строит изображение лабиринта на основе матрицы
+  */
+  void 															createImages();
 
-	public:
-		void 															loadMazeFromFile(QString);
-		void 															setMazeToScene(QGraphicsScene * );
+public:
+  /**
+  * Метод принимает адрес файла с данными лабиринта и строит лабиринт на его 
+  * основе
+  */
+	void 															loadMazeFromFile(QString);
+  /**
+  * Метод принимает указатель на сцену и размещает на ней лабиринт
+  */
+	void 															setMazeToScene(QGraphicsScene * );
 };
 
 #endif // MAZE_H
