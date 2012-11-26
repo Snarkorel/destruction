@@ -13,11 +13,10 @@ class MainForm : public QWidget
 //TODO добавить метод который бы вернул указатель на сцену и вернуть ее в поле
 // private
 public:
-	EventHandler  eventhandler;
-	  MainScene *   	gamescene;
+	EventHandler eventhandler;
+	MainScene * gamescene;
   MainForm(QWidget * parent = 0);
 private:
-  QGraphicsView 	graphicsview;
-
+  QGraphicsView	graphicsview;
 };
 #endif // MAINFORM_H

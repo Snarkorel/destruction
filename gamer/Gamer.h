@@ -9,16 +9,18 @@ class Gamer:public QGraphicsPixmapItem
     // Q_OBJECT
 public:
   Gamer( QObject *parent = 0 );
-  QPixmap  				image;
-  int getDeltaOffset();
-	void gamerUp();
+  void gamerUp();
   void gamerDown();
   void gamerRight();
   void gamerLeft();
-//  int max_player_offset(int direction);
+  // так будет правильнее
+  inline int getDeltaOffset(){ return delta; };
+  inline int width(){ return image.width(); };
+  inline int height(){ return image.height(); };
+
+  int MaxPlayerOffset(int);
 private:
-  int width();
-  int height();
+  QPixmap image;
   int delta;
 };
 

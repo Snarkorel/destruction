@@ -17,7 +17,6 @@ class MainScene:public QGraphicsScene
     
 public:
   Gamer * gamer;
-  //MainScene();
   void createMaze();
   void setBackground(int cellSize = 50);
   
