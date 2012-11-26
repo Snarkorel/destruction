@@ -1,14 +1,8 @@
 #include "Gamer.h"
-#include <QPixmap>
 #include <QGraphicsScene>
 
-Gamer::Gamer(QObject *parent):
-										image(50,50)
-{
-  image.load("graphics/player.png");
-  setPixmap(image);
-  setTransformOriginPoint(width()/2,height()/2);
-  delta=10;
+Gamer::Gamer(QObject *parent): MovableUnit( "graphics/player.png" ){
+    delta=10;
 }
 
 //Потом надо будет убрать вычитание, но у меня почему-то неправильно работает суммирование отрицательного числа

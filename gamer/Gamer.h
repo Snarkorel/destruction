@@ -3,10 +3,10 @@
 #include <QObject>
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
+#include "MovableUnit.h"
 
-class Gamer:public QGraphicsPixmapItem
+class Gamer : public MovableUnit
 {
-    // Q_OBJECT
 public:
   Gamer( QObject *parent = 0 );
   void gamerUp();
@@ -15,12 +15,8 @@ public:
   void gamerLeft();
   // так будет правильнее
   inline int getDeltaOffset(){ return delta; };
-  inline int width(){ return image.width(); };
-  inline int height(){ return image.height(); };
-
   int MaxPlayerOffset(int);
 private:
-  QPixmap image;
   int delta;
 };
 

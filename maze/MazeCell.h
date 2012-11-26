@@ -5,15 +5,14 @@
 #include <QString>
 #include <QPixmap>
 
-class MazeCell:public QGraphicsPixmapItem
-{
-
-  	int						edgeSize;
-  	QPixmap 		  cellImage;
-	public:
-									MazeCell(int);
-		int						getEdgeSize();
-		void					setImage(QString);
+class MazeCell:public QGraphicsPixmapItem{
+private:
+ 	int edgeSize;
+ 	QPixmap cellImage;
+public:
+		MazeCell(int);
+		int	getEdgeSize();
+		void setImage(QString);
 };
 
 #endif // MAZECELL_H
