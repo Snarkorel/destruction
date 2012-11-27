@@ -2,8 +2,8 @@
 
 ImmovableUnit::ImmovableUnit( const char * _file ) : Unit( _file )
 {
-  destructible=true;
-  alive=true;
+  destructible = true;
+  alive = true;
 }
 
 bool ImmovableUnit::getDestructibleFlag()
