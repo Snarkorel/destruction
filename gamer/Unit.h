@@ -4,14 +4,32 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 
+/** \class Unit
+* \breif Класс объекта на сцене 
+*
+* Содержит методы, присущие всем объектам сцены
+*/
+
 class Unit : public QGraphicsPixmapItem{
 public:
-	Unit( QObject * parent = 0 );
-	Unit( const char * );
-	inline int width(){ return image.width(); };
+  /**
+  * Конструктор создает изображение игрока, устанавливает точку, вокруг которой 
+  * будет осуществляться поворот 
+  */
+  Unit( const char * );
+  /**
+  * метод который возвращает ширину спрайта
+  */
+  inline int width(){ return image.width(); };
+  /** 
+  * метод который возвращает длину спрайта
+  */
   inline int height(){ return image.height(); };
 private:
-	QPixmap image;		
+  /**
+  * Атрибут в котором хранится спрайт объекта
+  */
+  QPixmap image;    
 };
 
 #endif
