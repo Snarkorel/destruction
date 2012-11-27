@@ -9,6 +9,7 @@ SOURCES += \
     maze/MazeMatrix.cpp \
     maze/MazeCell.cpp \
     eventhandler/EventHandler.cpp \
+    gamer/ImmovableUnit.cpp
 
 HEADERS += \
     scene/MainScene.h \
@@ -20,6 +21,7 @@ HEADERS += \
     maze/MazeMatrix.h \
     maze/MazeCell.h \
     eventhandler/EventHandler.h \
+    gamer/ImmovableUnit.h
 
 
 DESTDIR = .
